@@ -62,6 +62,7 @@ public class RobotContainer {
             0.9, Joystick.getRawAxis(1) * 0.75),
             m_sub_Drivetrain));
   }
+  // this removes driver controller from the drivetrain
   public void clearDrivetrain() {
     if (m_sub_Drivetrain.getCurrentCommand() != null) {
       m_sub_Drivetrain.setDefaultCommand(new RunCommand(() -> {
