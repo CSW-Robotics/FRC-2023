@@ -52,6 +52,7 @@ public class RobotContainer {
   SendableChooser<Command> m_chooser = new SendableChooser<>();
 
   //Drivetrain code. This config is very import to stop it from messing with the auto code
+  // this resets the curret command. When the robot is restarted the old command will still be running
   public void startDrivetrain() {
     if (m_sub_Drivetrain.getCurrentCommand() != null) {
       m_sub_Drivetrain.getCurrentCommand().cancel();
